@@ -21,8 +21,11 @@ Possible changes / improvements:
  * better placement of the sliders.
 
 ## [CC_02: Marble track](https://hgnep.github.io/Coding-Challenges/CC_02%20Marble%20track)
-After seeing some of Coding Train Daniel Shiffman's videos about the physics engine Matter.js I wanted to try this myself. I decided to make a marble track. The idea was to make several screens through which the marble could move. I ended up making only one, so there is still some things left to do. By clicking on the screen the marble is created and it will move through the screen. At the same time the screen moves up, so that the marble will always stay at the same height of the canvas.
+After seeing some of Coding Train Daniel Shiffman's videos about the physics engine Matter.js I wanted to try this myself. I decided to make a marble track. The idea was to make several screens through which the marble could move. I ended up making only one, so there are still some things left to do. By clicking on the screen the marble is created and it will move through the screen. At the same time the screen moves up, so that the marble will always stay at the same height of the canvas.
 
 Possible changes / improvements:
  * Making more screens
  * Make sure that the marble ends at the same horizontal position as it started, so that the marble can move through the screens.
+
+<br>
+<br>
