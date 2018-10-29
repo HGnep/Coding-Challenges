@@ -9,27 +9,28 @@ function setup() {
 //game settings
 	numberOfMines = 10;
 	blocksPerRow = 10;
+	blocksPerCol = blocksPerRow
 
 //setting up the field
 	fieldSize = 600;
 	blockSize = floor(fieldSize/blocksPerRow);
 	for (var i = 0; i < blocksPerRow; i++){
-		for (var j=0; j < blocksPerRow; j++) {
+		for (var j=0; j < blocksPerCol; j++) {
 			blocks.push(new Block(i, j));
 		}
 	}
-	createCanvas(fieldSize + 210, fieldSize + 10);
+	createCanvas(fieldSize + 210, fieldSize + 10); // +200 room for score etc
 
 	//create the mines
 	for (var i = 0; i < numberOfMines; i++) {
 		var newMine = blocks[floor(random(blocks.length))];
 		while (newMine.mine) {
-			// if newMine already is a mine, pick another block
+			// if newMine already is a mine, pick another block - whatch out for infinite loop!
 			newMine = blocks[floor(random(blocks.length))];
 		}
 		newMine.mine = true;
 
-		//Update value neighbours of mine
+		//Update value of the neighbours of the mine
 		var neighbours = getNeighbours(newMine);
 		for (var j = 0; j < neighbours.length; j++) {
 			neighbours[j].value++;
@@ -44,7 +45,7 @@ function draw() {
 	background(210);
 
 	strokeWeight(5);
-	rect(5, 5, fieldSize, fieldSize);
+	rect(5, 5, fieldSize, fieldSize); //5,5 to create a nice edge arround the field
 
 	for (var i = 0; i < blocks.length; i++) {
 				blocks[i].show();
@@ -54,10 +55,10 @@ function draw() {
 
 function mousePressed() {
 	mouseX, mouseY
-	var blockX = floor(mouseX / blockSize);
-	var blockY = floor(mouseY / blockSize);
+	var blockX = floor((mouseX - 5) / blockSize); //5 offset
+	var blockY = floor((mouseY - 5) / blockSize);
 
-	if (blockX < blocksPerRow && blockY < blocksPerRow) {
+	if (blockX < blocksPerRow && blockY < blocksPerCol) {
 		var index = blockX*blocksPerRow + blockY;
 		var block = blocks[index];
 		open(block);
@@ -86,7 +87,7 @@ function getNeighbours(block) {
 	for (var i = -1; i <= 1; i++) {
 		for (var j = -1; j <= 1; j++) {
 			if (i === 0 && j === 0) {
-				continue
+				continue // this would be the block itself
 			}
 			var neighbourX = block.x + i;
 			var neighbourY = block.y + j;

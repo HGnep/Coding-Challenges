@@ -1,5 +1,5 @@
 function Block(x, y) {
-	// x and y are block position (not coordinates)
+	// x and y are coordinates on the play field (not on the canvas)
 	this.x = x;
 	this.y = y;
 	this.open = false;
