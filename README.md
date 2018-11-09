@@ -1,4 +1,4 @@
-[gh-logo]: https://raw.githubusercontent.com/HGnep/Coding-Challenges/gh-pages/gh.png|width=100
+<!--[gh-logo]: https://raw.githubusercontent.com/HGnep/Coding-Challenges/gh-pages/gh.png|width=100-->
 
 # Coding-Challenges
 
