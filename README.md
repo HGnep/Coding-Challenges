@@ -1,3 +1,5 @@
+[gh-logo]: https://raw.githubusercontent.com/HGnep/Coding-Challenges/gh-pages/gh.png|width=100
+
 # Coding-Challenges
 
 This repo is meant for short and creative coding projects.
@@ -21,8 +23,8 @@ Possible changes / improvements:
  * Other shapes in stead of squares,
  * better placement of the sliders.
 
-## [CC_02: Marble track](https://hgnep.github.io/Coding-Challenges/CC_02%20Marble%20track)
-** [[CODE]](https://github.com/HGnep/Coding-Challenges/tree/gh-pages/CC_02%20Marble%20track)
+## [CC_02: Marble track](https://hgnep.github.io/Coding-Challenges/CC_02%20Marble%20track)   
+
 After seeing some of Coding Train Daniel Shiffman's videos about the physics engine Matter.js I wanted to try this myself. I decided to make a marble track. The idea was to make several screens through which the marble could move. I ended up making only one, so there are still some things left to do. By clicking on the screen the marble is created and it will move through the screen. At the same time the screen moves up, so that the marble will always stay at the same height of the canvas.
 
 Possible changes / improvements:
@@ -30,8 +32,8 @@ Possible changes / improvements:
  * Make sure that the marble ends at the same horizontal position as it started, so that the marble can move through the screens.
 
 
-##[CC_03: Minesweeper](https://hgnep.github.io/Coding-Challenges/CC_03%20Minesweeper)
-** May 28th, 2017, [[CODE]]() **
+## [CC_03: Minesweeper](https://hgnep.github.io/Coding-Challenges/CC_03%20Minesweeper)
+
 This game was made after seeing a [video upload](https://www.youtube.com/watch?v=LFU5ZlrR21E) of Coding Train on YouTube that did exactly this. I thought it would be nice to try it myself before watching his attempt.
 One interesting difference is the way how all mines (or in his case: bees) are chosen. I first choose a field at random and when that field is already a mine, I use recursion to pick another one. He on the other hand creates an array with all options, picks one and after it's made into a mine (bee) it gets removed from the array. I think the method I use is fine, but with a lot mines relatively to the number of cells it could get quite slow, so I do think his method is better.
 
