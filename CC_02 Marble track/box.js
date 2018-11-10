@@ -5,6 +5,7 @@ function Box(x, y, width, height, options) {
 
 	this.body = Bodies.rectangle(x, y, this.width, this.height, options);
 	World.add(world, this.body);
+	//OOOOH hier is de world.add!!
 
 	this.show = function() {
 		var pos = this.body.position;
@@ -14,13 +15,14 @@ function Box(x, y, width, height, options) {
 		rotate(angle);
 		rectMode(CENTER);
 		if (this.body.isStatic) {
-			fill(0);
-			stroke(120);
+			var color = 'rgb(10, 20, 30)'
 		}
 		else {
-			fill(255);
-			stroke(0);
+			var color = 'rgb(0, 0, 0)'
 		}
+		fill(color);
+		stroke(color);
+
 		rect(0, 0, this.width, this.height);
 		pop();
 	}
