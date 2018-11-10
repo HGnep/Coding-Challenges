@@ -1,9 +1,11 @@
 function Marble(x, y, radius) {
 	this.radius = radius;
 	// this.x en this.y is niet nodig, omdat die al worden opgeslagen in body.position
+
 	var options = {
 		friction: 0
 	}
+
 	this.body = Bodies.circle(x, y, this.radius, options);
 	World.add(world, this.body);
 

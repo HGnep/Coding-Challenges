@@ -32,27 +32,21 @@ function mousePressed() {
 	if (marble) {
 		marble.removeFromWorld();
 	}
-	var options = {
-		showAxes: true
-	}
-	marble = new Marble(mouseX, mouseY, 10, options);
+	marble = new Marble(mouseX, mouseY, 10);
 	marbleHeight = marble.body.position.y;
 }
 
+var count = 0;
 
 function draw() {
-	if (prevField.offScreen()) {
-		console.log("prev OFF!");
-		// noLoop();
-		prevField.remove();
-		prevField = newField;
-		newField = screen1();
-		newField.move(height);
-	}
 	background('rgb(150,240,120)');
 	Engine.update(engine);
+
+	//show both worlds
 	prevField.show();
 	newField.show();
+
+	//if there exists a marble, we need to move and draw this
 	if (marble) {
 		var newHeight = marble.body.position.y;
 		var dy = newHeight - marbleHeight;
@@ -60,5 +54,25 @@ function draw() {
 		newField.move(-dy);
 		marble.move(-dy);
 		marble.show();
+	}
+
+	//if the previous screen is out of bounds, create a new one
+	if (prevField.offScreen()) {
+		count ++
+		prevField.remove();
+		prevField = newField;
+
+		switch (count % 2) {
+			case 0:
+				console.log("even");
+				newField = screen1();
+				break;
+			case 1:
+				console.log("Odd");
+				newField = screen2();
+				break;
+		}
+		// noLoop();
+		newField.move(height);
 	}
 }
