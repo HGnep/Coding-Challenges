@@ -4,6 +4,7 @@ var Engine = Matter.Engine,
 	World = Matter.World,
 	Bodies = Matter.Bodies,
 	Body = Matter.Body;
+	Vertices = Matter.Vertices;
 
 
 var engine;
@@ -16,10 +17,11 @@ var marble;
 var marbleHeight;
 
 function setup() {
-	createCanvas(400,400);
+	canvas = createCanvas(400,800);
 	engine = Engine.create();
 	world = engine.world;
-	// Engine.run(engine);
+	//Engine.run(engine);
+
 
 	prevField = emptyScreen();
 	newField = screen1();
@@ -62,7 +64,7 @@ function draw() {
 		prevField.remove();
 		prevField = newField;
 
-		switch (count % 2) {
+		switch (count % 3) {
 			case 0:
 				console.log("even");
 				newField = screen1();
@@ -71,8 +73,12 @@ function draw() {
 				console.log("Odd");
 				newField = screen2();
 				break;
+			case 2:
+				console.log("3");
+				newField = screen3();
+				break;
 		}
-		// noLoop();
+		//noLoop();
 		newField.move(height);
 	}
 }
