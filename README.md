@@ -10,6 +10,7 @@ All challenges:
  * [CC_01: Sandpiles](#cc_01-sandpiles)
  * [CC_02: Marble track](#cc_02-marble-track)
  * [CC_03: Minesweeper](#cc_03-minesweeper)
+ * [CC 04: Wordle Solver](#cc_04-wordle-solver)
 
 ## [CC_01: Sandpiles](https://hgnep.github.io/Coding-Challenges/CC_01%20Sandpile/JS/)
 This first coding challenge is based on a [video](https://www.youtube.com/watch?v=1MtEUErz7Gg) by Numberphile about sandpiles. A mathematical sandpile is a grid (or a matrix) with in each cell a value between 0 and 3, representing the height of the pile at that position. You can add two piles by adding the values pairswise, and with this operation it can, under certain restrictions, even form a [group](https://en.wikipedia.org/wiki/Group_(mathematics)). if, at a cell, the value is greater than 3, the pile topples. This means that the value of every one of the four adjacent cells increases by one.
@@ -29,7 +30,6 @@ Possible changes / improvements:
  * Making more screens,
  * Make sure that the marble ends at the same horizontal position as it started, so that the marble can move through the screens.
 
-
 ## [CC_03: Minesweeper](https://hgnep.github.io/Coding-Challenges/CC_03%20Minesweeper)
 
 This game was made after seeing a [video upload](https://www.youtube.com/watch?v=LFU5ZlrR21E) of Coding Train on YouTube that did exactly this. I thought it would be nice to try it myself before watching his attempt.
@@ -41,5 +41,16 @@ Possible changes / improvements:
  * Win when everything but mines is revealed,
  * Possibility to block of fields when you're sure there is a mine,
  * Changeable size / number of mines.
+
+## [CC_04: Wordle Solver]
+Wordle is quite popular at the moment. I am personally not that good at it. So one day, when trying to come up with words to try and my mind blanking out as usual I decided to make a small program that could solve it for me. 
+At first I've done this in C#, because that's where I'm the most proficient in. I've used a lot of Linq lately and that seemed to be the ideal method to filter a big list of words. I got a list of words from some GitHub repo (TODO: search what repo this was, to properly give credits) and am adding to another list of words that aren't in the list of words accepted by Wordle. (This last part is not really working yet)
+It would be nice if I could do something similar in JavaScript, so it would be just browser-based. But I don't know yet how to add to a list that excludes certain words. 
+
+Possible changes / improvements:
+ * Checking of input,
+ * Adding to a list of words that aren't accepted by Wordle,
+ * A more intelligent way of coming up with the best possible guess,
+ * Building it in JavaScript.
 <br>
 <br>
