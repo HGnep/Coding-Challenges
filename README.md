@@ -42,15 +42,18 @@ Possible changes / improvements:
  * Possibility to block of fields when you're sure there is a mine,
  * Changeable size / number of mines.
 
-## [CC_04: Wordle Solver]
-Wordle is quite popular at the moment. I am personally not that good at it. So one day, when trying to come up with words to try and my mind blanking out as usual I decided to make a small program that could solve it for me. 
-At first I've done this in C#, because that's where I'm the most proficient in. I've used a lot of Linq lately and that seemed to be the ideal method to filter a big list of words. I got a list of words from some GitHub repo (TODO: search what repo this was, to properly give credits) and am adding to another list of words that aren't in the list of words accepted by Wordle. (This last part is not really working yet)
-It would be nice if I could do something similar in JavaScript, so it would be just browser-based. But I don't know yet how to add to a list that excludes certain words. 
+## CC_04: Wordle Solver
+[Wordle](https://www.nytimes.com/games/wordle/index.html) is quite popular at the moment. I am personally not that good at it. So one day, when trying to come up with words to try and my mind blanking out as usual I decided to make a small program that could solve it for me. 
+At first I'd done this in C#, because that's where I'm the most proficient and comfortable in. I've used a lot of Linq lately and that seems to be an ideal method to filter a big list of words. I took the complete list of words accepted by wordle and can filtered this list based on the info that's given. 
+I would like to do something similar in JavaScript, so it would be just browser-based.
+
+ By now I've found lots of other wordle-like games like [Dordle](https://zaratustra.itch.io/dordle), [Quordle](https://www.quordle.com/#/) and [Octordle](https://octordle.com/) and more intriguing ones like [Squardle](https://fubargames.se/squardle/) and [Symble](https://www.symble.app/). I'm really bad at finding words to try, but I like the puzzle aspect of these. That's how I mainly use this program. 
 
 Possible changes / improvements:
  * Checking of input,
  * Adding to a list of words that aren't accepted by Wordle,
  * A more intelligent way of coming up with the best possible guess,
  * Building it in JavaScript.
-<br>
+ * Making something similar for solving [Mathler](https://www.mathler.com/)
+ <br>
 <br>
