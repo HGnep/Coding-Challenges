@@ -1,0 +1,67 @@
+body {
+  overflow:hidden;
+}
+
+:root {
+  --key-size: 48px;
+}
+
+#middleRow {
+  position: relative;
+  left: calc(0.5*var(--key-size));
+}
+
+#lastRow {
+  position: relative;
+  left: var(--key-size);
+}
+
+.key {
+    font-size: calc(0.5*var(--key-size));
+    font-weight: bold;
+    font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;
+
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: var(--border-color-light, #d6d6d6) var(--border-color-dark, #b4b4b4) var(--border-color-dark, #b4b4b4) var(--border-color-light, #d6d6d6);
+
+    width: var(--key-size);
+    height: var(--key-size);
+    margin: 3px;
+    background-color: var(--bg-color, lightgrey);
+    color: var(--text-color, black);
+    cursor:pointer;
+    position:relative;
+}
+
+.key:hover {
+  top:3px;
+}
+
+.inWord {
+  --bg-color: #f2f200;
+  --border-color-light: #d6d600;
+  --border-color-dark: #b4b400;
+  --text-color: black;
+}
+
+.unknown {
+  --bg-color: lightgrey;
+  --text-color: black;
+  --border-color-light:#d6d6d6;
+  --border-color-dark: #b4b4b4;
+}
+
+.correctPosition {
+  --bg-color: #3cb43c;
+  --border-color-light:#36a136;
+  --border-color-dark: #2d862d;
+  --text-color: white;
+}
+
+.notInWord {
+  --bg-color: #3c3a3a;
+  --border-color-light:#222020;
+  --border-color-dark:#121111;
+  --text-color: lightgrey;
+}
